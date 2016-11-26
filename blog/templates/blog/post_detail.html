@@ -1,5 +1,5 @@
 {% extends 'blog/base.html' %}
-
+{% load thumbnail %}
 {% block content %}
     <div class="post">
         {% if post.published_date %}
@@ -12,5 +12,11 @@
         {% endif %}
         <h1>{{ post.title }}</h1>
         <p>{{ post.text|linebreaksbr }}</p>
+        {% if post.picture %}
+              {% thumbnail post.picture "300x300" as im %}
+              <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+          {% endthumbnail %}
+        {% endif %}
+
     </div>
 {% endblock %}
