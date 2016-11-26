@@ -25,7 +25,7 @@ SECRET_KEY = 'da(m=4)z3=wm!-kwp!hw#778sk4mabq6btgkps#)ai16x9tw&u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mnemosyne.pythonanywhere.com']
+ALLOWED_HOSTS = ['mnemosyne.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
